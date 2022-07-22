@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css" type="text/css">
+    <title>Teste prático FrontEnd</title>
+</head>
+<body>
+
+    <form id = "form-login"> 
+        
+        <h3>Login</h3> <!-- Título -->
+        <input type = "text" placeholder = "Usuário" id="login"> <!-- Campo de login -->
+        <input type = "password" placeholder = "senha" id="senha"> <!-- Campo de senha -->
+        <input type = "submit" > <!-- Botão de entrar -->
+    
+    </form>
+        
+        <script>
+           const URL = "https://login.microsoftonline.com/be87ed09-e753-468f-8244-e2f3811ceacc/oauth2/v2.0/token";
+           const header = { 
+                "Content-Type": "application/x-www-form-urlencoded",
+                'SdkVersion': 'postman-graph/v1.0'
+            };
+            const form = document.querySelector("#form-login");
+            form.addEventListener("submit", async function(event){
+                event.preventDefault();
+                const login = document.querySelector("#login").value;
+                const senha = document.querySelector("#senha").value;
+
+                if (login == 'admin' && senha == 'admin'){
+                    alert ("Logado com sucesso!");
+                    window.location.href = "Home.html";//redirecionando para a pagina home
+                }else{
+                    alert ("Usuário ou senha incorretos!");
+                }
+            });                       
+                       
+        </script>
+        
+</body>
+</html>
