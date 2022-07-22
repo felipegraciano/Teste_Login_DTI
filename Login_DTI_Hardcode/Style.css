@@ -1,0 +1,28 @@
+
+*{
+    box-sizing: border-box;
+}/* estilo das caixas */
+
+body{
+    width: 100%;
+    height: 100%;
+}/*tamahnho da pagina*/
+
+form{
+    width: 300px;
+    margin: 200px auto;
+    text-align: center;
+} /*tamanho do formulario*/
+
+div{
+    width: 300px;
+    margin: 200px auto;
+    text-align: center;
+}
+
+input{
+    display: block;
+    margin: 20px;
+    width: 250px;
+    height: 30px;
+} /*tamanho dos inputs*/
